@@ -3,6 +3,7 @@ const app = express();
 const expressLayouts = require('express-ejs-layouts');
 
 const indexRouter = require('./routes/index');
+const courseRouter = require('./routes/courses');
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://dbuser:avokado@lyubovk.egwftuw.mongodb.net/?retryWrites=true&w=majority');
@@ -18,5 +19,6 @@ app.use(expressLayouts);
 app.use(express.static('public'));
 
 app.use('/', indexRouter);
+app.use('/courses', courseRouter);
 
 app.listen(process.env.PORT || 3000)
