@@ -1,1 +1,10 @@
-New Courses
+<h2>New Courses</h2>
+
+<!-- action is a URL where the form goes to -->
+<form action="/courses" method="POST">
+    
+    <%- include('_form_fields') %>
+    <!-- links are used to link things, and buttons are used to interract with forms and others -->
+    <a href="/courses">Cancel</a>
+    <button type="submit">Submit</button>
+</form>
