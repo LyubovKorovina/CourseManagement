@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const courseSchema = new mongoose.Schema({
-    ID: {
-        type: Number,
-        required: true
-    },
     name: {
         type: String,
+        required: true
+    },
+    ID: {
+        type: Number,
         required: true
     },
     description: {
@@ -14,4 +14,4 @@ const courseSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Author', courseSchema);
+module.exports = mongoose.model('Course', courseSchema);
